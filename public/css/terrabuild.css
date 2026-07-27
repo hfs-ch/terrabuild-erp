@@ -1,0 +1,1026 @@
+/*====================================================
+    TerraBuild ERP
+    Premium Theme
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import './admin.css';
+
+:root{
+
+--primary:#1C3354;
+--secondary:#C9962E;
+--background:#F4F6F9;
+--white:#ffffff;
+--text:#273444;
+--success:#28a745;
+--danger:#dc3545;
+--warning:#ffc107;
+--shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+background:var(--background);
+color:var(--text);
+
+}
+
+/*******************
+SIDEBAR
+********************/
+
+.main-sidebar{
+
+background:#16283d!important;
+box-shadow:5px 0 25px rgba(0,0,0,.15);
+
+}
+
+.brand-link{
+
+background:#132235!important;
+padding:18px;
+
+}
+
+.brand-text{
+
+font-size:22px;
+font-weight:700;
+color:white!important;
+
+}
+
+.sidebar{
+
+padding-top:15px;
+
+}
+
+.nav-sidebar .nav-link{
+
+margin:6px 10px;
+border-radius:12px;
+padding:12px 15px;
+transition:.35s;
+
+}
+
+.nav-sidebar .nav-link:hover{
+
+background:#27456d;
+transform:translateX(5px);
+
+}
+
+.nav-sidebar .nav-link.active{
+
+background:linear-gradient(90deg,#C9962E,#d7aa48);
+color:white!important;
+font-weight:600;
+
+}
+
+.nav-icon{
+
+margin-right:8px;
+
+}
+
+/*******************
+NAVBAR
+********************/
+
+.main-header{
+
+background:white!important;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+border:none;
+
+}
+
+.navbar{
+
+padding:15px 25px;
+
+}
+
+/*******************
+CONTENT
+********************/
+
+.content-wrapper{
+
+background:#f4f6f9;
+
+}
+
+.content-header h1{
+
+font-size:30px;
+font-weight:700;
+
+}
+
+/*******************
+CARD
+********************/
+
+.card{
+
+border:none;
+border-radius:18px;
+overflow:hidden;
+box-shadow:var(--shadow);
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-3px);
+
+}
+
+.card-header{
+
+background:white;
+border:none;
+font-weight:700;
+padding:20px;
+
+}
+
+.card-body{
+
+padding:25px;
+
+}
+
+/*******************
+BUTTONS
+********************/
+
+.btn{
+
+border-radius:10px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn-primary{
+
+background:#1C3354;
+border:none;
+
+}
+
+.btn-primary:hover{
+
+background:#284d7a;
+transform:translateY(-2px);
+
+}
+
+.btn-success{
+
+background:#28a745;
+border:none;
+
+}
+
+.btn-warning{
+
+background:#C9962E;
+color:white;
+border:none;
+
+}
+
+.btn-danger{
+
+border:none;
+
+}
+
+.btn-info{
+
+border:none;
+
+}
+
+/*******************
+TABLE
+********************/
+
+.table{
+
+border-radius:12px;
+overflow:hidden;
+
+}
+
+.table thead{
+
+background:#1C3354;
+color:white;
+
+}
+
+.table thead th{
+
+padding:18px;
+border:none;
+
+}
+
+.table td{
+
+padding:15px;
+vertical-align:middle;
+
+}
+
+.table tbody tr{
+
+transition:.3s;
+
+}
+
+.table tbody tr:hover{
+
+background:#eef4fb;
+
+}
+
+/*******************
+INPUTS
+********************/
+
+.form-control{
+
+border-radius:10px;
+border:1px solid #d7d7d7;
+padding:12px;
+
+}
+
+.form-control:focus{
+
+border-color:#1C3354;
+box-shadow:0 0 12px rgba(28,51,84,.15);
+
+}
+
+.form-label{
+
+font-weight:600;
+
+}
+
+/*******************
+BADGES
+********************/
+
+.badge{
+
+padding:8px 14px;
+border-radius:25px;
+font-size:13px;
+
+}
+
+/*******************
+SEARCH
+********************/
+
+input[type=text],
+input[type=search]{
+
+border-radius:30px;
+
+}
+
+/*******************
+PAGINATION
+********************/
+
+.page-link{
+
+border-radius:8px;
+margin:2px;
+
+}
+
+.page-item.active .page-link{
+
+background:#1C3354;
+border-color:#1C3354;
+
+}
+
+/*******************
+SCROLLBAR
+********************/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#1C3354;
+border-radius:30px;
+
+}
+
+/*******************
+ANIMATION
+********************/
+
+.card{
+
+animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+100%{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/*******************
+KPI
+********************/
+
+.small-box{
+
+border-radius:18px;
+box-shadow:var(--shadow);
+
+}
+
+.small-box>.inner{
+
+padding:20px;
+
+}
+
+.small-box h3{
+
+font-size:34px;
+font-weight:700;
+
+}
+
+/*******************
+FOOTER
+********************/
+
+.main-footer{
+
+background:white;
+border:none;
+padding:15px;
+
+} 
+/* ==========================================
+   TerraBuild ERP - Premium Enhancements
+========================================== */
+
+/* ===== Logo ===== */
+
+.brand-link{
+    height:85px !important;
+    display:flex !important;
+    align-items:center;
+    justify-content:flex-start;
+    padding:0 18px !important;
+}
+
+.brand-link .brand-image{
+    max-height:58px !important;
+    width:auto !important;
+    margin-right:15px !important;
+    margin-left:0 !important;
+    opacity:1 !important;
+    transition:.3s;
+}
+
+.brand-link:hover .brand-image{
+    transform:scale(1.05);
+}
+
+.brand-link .brand-text{
+    font-size:22px !important;
+    font-weight:700 !important;
+    color:#fff !important;
+}
+
+/* ===== Sidebar ===== */
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link{
+    color:#d8dde6;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link:hover{
+    color:#fff;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active{
+    color:#fff;
+    box-shadow:0 8px 18px rgba(201,150,46,.35);
+}
+
+.sidebar .nav-treeview{
+    padding-left:18px;
+}
+
+/* ===== Navbar ===== */
+
+.main-header{
+    height:70px;
+    display:flex;
+    align-items:center;
+}
+
+.main-header .navbar-nav .nav-link{
+    color:#1C3354;
+    font-weight:500;
+}
+
+.main-header .navbar-nav .nav-link:hover{
+    color:#C9962E;
+}
+
+/* ===== Cards ===== */
+
+.card{
+    border-radius:20px !important;
+}
+
+.card-header{
+    border-bottom:1px solid #edf1f5;
+}
+
+.card-title{
+    font-weight:700;
+}
+
+/* ===== Tables ===== */
+
+.table{
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.table tbody tr{
+    border-bottom:1px solid #edf1f5;
+}
+
+.table tbody tr:last-child{
+    border-bottom:none;
+}
+
+/* ===== Buttons ===== */
+
+.btn{
+    padding:10px 22px;
+}
+
+.btn-primary{
+    background:#1C3354;
+}
+
+.btn-primary:hover{
+    background:#25466f;
+}
+
+.btn-warning{
+    background:#C9962E;
+}
+
+.btn-warning:hover{
+    background:#b88925;
+}
+
+.btn-success:hover{
+    transform:translateY(-2px);
+}
+
+/* ===== Forms ===== */
+
+.form-control,
+.custom-select,
+select{
+    min-height:46px;
+}
+
+.form-control:focus{
+    transform:scale(1.01);
+}
+
+/* ===== KPI ===== */
+
+.small-box{
+    overflow:hidden;
+    transition:.35s;
+}
+
+.small-box:hover{
+    transform:translateY(-5px);
+}
+
+.small-box .icon{
+    opacity:.15;
+    transition:.3s;
+}
+
+.small-box:hover .icon{
+    transform:scale(1.1);
+}
+
+/* ===== Badges ===== */
+
+.badge-success{
+    background:#28a745;
+}
+
+.badge-warning{
+    background:#C9962E;
+    color:#fff;
+}
+
+.badge-danger{
+    background:#dc3545;
+}
+
+.badge-info{
+    background:#1C3354;
+}
+
+/* ===== Breadcrumb ===== */
+
+.breadcrumb{
+    background:transparent;
+    padding:0;
+    margin-bottom:20px;
+}
+
+.breadcrumb-item a{
+    color:#1C3354;
+    font-weight:500;
+}
+
+/* ===== Dropdown ===== */
+
+.dropdown-menu{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+/* ===== Pagination ===== */
+
+.pagination{
+    justify-content:flex-end;
+}
+
+.page-link{
+    color:#1C3354;
+}
+
+.page-link:hover{
+    background:#1C3354;
+    color:#fff;
+}
+
+/* ===== Footer ===== */
+
+.main-footer{
+    font-size:14px;
+    color:#666;
+}
+
+/* ===== Loader Animation ===== */
+
+.fade-card{
+    animation:fadeCard .5s ease;
+}
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===== Responsive ===== */
+
+@media(max-width:768px){
+
+.brand-link{
+
+    height:70px !important;
+
+}
+
+.brand-link .brand-image{
+
+    max-height:45px !important;
+
+}
+
+.brand-link .brand-text{
+
+    font-size:18px !important;
+
+}
+
+.small-box h3{
+
+    font-size:26px;
+
+}
+
+.card-body{
+
+    padding:18px;
+
+}
+
+}
+/*=====================================================
+        TerraBuild ERP Premium UI v2
+======================================================*/
+
+/************** SIDEBAR **************/
+
+.main-sidebar{
+    background:linear-gradient(180deg,#16283d,#0f1d2f)!important;
+}
+
+.brand-link{
+    border-bottom:1px solid rgba(255,255,255,.08)!important;
+}
+
+.brand-link img{
+    border-radius:14px;
+    background:white;
+    padding:5px;
+}
+
+.nav-sidebar .nav-link{
+
+    margin:6px 12px;
+    border-radius:14px;
+    transition:.35s;
+    color:#d8dde6;
+
+}
+
+.nav-sidebar .nav-link:hover{
+
+    background:rgba(255,255,255,.08);
+    color:white;
+    transform:translateX(6px);
+
+}
+
+.nav-sidebar .nav-link.active{
+
+    background:linear-gradient(90deg,#C9962E,#d8aa43);
+    box-shadow:0 12px 25px rgba(201,150,46,.35);
+
+}
+
+.nav-icon{
+
+    font-size:17px;
+
+}
+
+/************** NAVBAR **************/
+
+.main-header{
+
+    background:rgba(255,255,255,.95)!important;
+    backdrop-filter:blur(15px);
+    border:none;
+
+}
+
+.main-header .nav-link{
+
+    transition:.25s;
+
+}
+
+.main-header .nav-link:hover{
+
+    color:#C9962E!important;
+
+}
+
+/************** PAGE TITLE **************/
+
+.content-header h1{
+
+    color:#1C3354;
+    font-size:32px;
+    font-weight:800;
+
+}
+
+/************** CARDS **************/
+
+.card{
+
+    border:none!important;
+    border-radius:20px!important;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.card-header{
+
+    background:white!important;
+    border-bottom:1px solid #edf2f7;
+    padding:18px 25px;
+
+}
+
+.card-title{
+
+    color:#1C3354;
+    font-size:20px;
+    font-weight:700;
+
+}
+
+/************** TABLE **************/
+
+.table{
+
+    border-collapse:separate;
+    border-spacing:0;
+
+}
+
+.table thead{
+
+    background:#1C3354;
+
+}
+
+.table thead th{
+
+    color:white;
+    border:none;
+    padding:18px;
+
+}
+
+.table tbody tr{
+
+    background:white;
+
+    transition:.25s;
+
+}
+
+.table tbody tr:hover{
+
+    transform:scale(1.01);
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.table td{
+
+    border-top:none;
+    padding:16px;
+
+}
+
+/************** BUTTONS **************/
+
+.btn{
+
+    border-radius:12px;
+    font-weight:600;
+    padding:10px 22px;
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(135deg,#1C3354,#355b8d);
+    border:none;
+
+}
+
+.btn-success{
+
+    background:linear-gradient(135deg,#28a745,#39c463);
+    border:none;
+
+}
+
+.btn-warning{
+
+    background:linear-gradient(135deg,#C9962E,#dfb44e);
+    color:white;
+    border:none;
+
+}
+
+.btn-danger{
+
+    background:linear-gradient(135deg,#dc3545,#ff5f6d);
+    border:none;
+
+}
+
+.btn-info{
+
+    background:linear-gradient(135deg,#0dcaf0,#41d9f7);
+    border:none;
+
+}
+
+/************** INPUT **************/
+
+.form-control,
+select{
+
+    border-radius:12px;
+    border:1px solid #d8dee9;
+
+}
+
+.form-control:focus{
+
+    border-color:#C9962E;
+    box-shadow:0 0 0 .2rem rgba(201,150,46,.18);
+
+}
+
+/************** KPI **************/
+
+.small-box{
+
+    border-radius:22px!important;
+    overflow:hidden;
+
+}
+
+.small-box .icon{
+
+    opacity:.18;
+
+}
+
+.small-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/************** BADGES **************/
+
+.badge{
+
+    border-radius:50px;
+    padding:8px 15px;
+    font-weight:600;
+
+}
+
+/************** PAGINATION **************/
+
+.page-link{
+
+    border:none;
+    border-radius:10px;
+    margin:3px;
+    color:#1C3354;
+
+}
+
+.page-item.active .page-link{
+
+    background:#1C3354;
+
+}
+
+/************** ALERT **************/
+
+.alert{
+
+    border:none;
+    border-radius:15px;
+
+}
+
+/************** LOGIN **************/
+
+.login-page,
+.register-page{
+
+    background:linear-gradient(135deg,#16283d,#203e64);
+
+}
+
+.login-box,
+.register-box{
+
+    width:430px;
+
+}
+
+.login-card-body,
+.register-card-body{
+
+    border-radius:22px;
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+/************** FOOTER **************/
+
+.main-footer{
+
+    background:white;
+    border:none;
+    box-shadow:0 -5px 15px rgba(0,0,0,.05);
+
+}
+
+/************** SCROLLBAR **************/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#1C3354;
+    border-radius:30px;
+
+}
+
+/************** ANIMATION **************/
+
+*{
+
+    transition:background .25s,color .25s;
+
+}
