@@ -19,7 +19,7 @@ use App\Http\Controllers\SalaireController;
 use App\Http\Controllers\DevisController;
 use App\Http\Controllers\FactureController;
 use App\Http\Controllers\PaiementController;
-use App\Http\Controllers\DocumentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -99,10 +99,6 @@ Route::resource('factures', FactureController::class)
 Route::resource('paiements', PaiementController::class)
     ->parameters(['paiements' => 'paiement']);
 
-Route::get(
-    'documents/{document}/download',
-    [DocumentController::class, 'download']
-)->name('documents.download');
 
 
     Route::get('/factures/{facture}/print',

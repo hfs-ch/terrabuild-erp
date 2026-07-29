@@ -47,30 +47,34 @@
                 <td>{{ $employe->poste }}</td>
                 <td>{{ $employe->telephone }}</td>
                 <td>{{ number_format($employe->salaire,2) }} MAD</td>
+<td>
 
-                <td>
+    <a href="{{ route('employes.show', $employe) }}"
+       class="btn btn-info btn-sm">
+        <i class="bi bi-eye"></i> Voir
+    </a>
 
-                    <a href="{{ route('employes.edit',$employe) }}"
-                       class="btn btn-warning btn-sm">
-                        Modifier
-                    </a>
+    <a href="{{ route('employes.edit', $employe) }}"
+       class="btn btn-warning btn-sm">
+        <i class="bi bi-pencil"></i> Modifier
+    </a>
 
-                    <form action="{{ route('employes.destroy',$employe) }}"
-                          method="POST"
-                          style="display:inline">
+    <form action="{{ route('employes.destroy', $employe) }}"
+          method="POST"
+          style="display:inline">
 
-                        @csrf
-                        @method('DELETE')
+        @csrf
+        @method('DELETE')
 
-                        <button
-                            class="btn btn-danger btn-sm"
-                            onclick="return confirm('Supprimer cet employé ?')">
-                            Supprimer
-                        </button>
+        <button
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Supprimer cet employé ?')">
+            <i class="bi bi-trash"></i> Supprimer
+        </button>
 
-                    </form>
+    </form>
 
-                </td>
+</td>
 
             </tr>
 

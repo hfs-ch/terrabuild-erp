@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Chantier;
 use App\Models\Client;
 use App\Models\Devis;
-use App\Models\Document;
 use App\Models\Employe;
 use App\Models\Equipe;
 use App\Models\Facture;
@@ -44,30 +43,41 @@ class DashboardController extends Controller
             ->mapWithKeys(fn ($item) => [$item->mois => (float) $item->total])
             ->toArray();
 
-        return view('dashboard', [
-            'employes' => Employe::count(),
-            'clients' => Client::count(),
-            'projets' => Projet::count(),
-            'chantiers' => Chantier::count(),
-            'equipes' => Equipe::count(),
-            'fournisseurs' => Fournisseur::count(),
-            'vehicules' => Vehicule::count(),
-            'taches' => Tache::count(),
-            'presences' => Presence::count(),
-            'salaires' => Salaire::count(),
-            'devis' => Devis::count(),
-            'factures' => Facture::count(),
-            'paiements' => Paiement::count(),
-            'documents' => Document::count(),
-            'materiels' => Materiel::count(),
-            'stock_total' => (int) Stock::sum('quantite'),
-            'stock_value' => (float) Stock::join('materiels', 'stocks.materiel_id', '=', 'materiels.id')
-                ->sum(DB::raw('stocks.quantite * materiels.prix_unitaire')),
-            'factures_impayees' => Facture::where('statut', '!=', 'Payée')->count(),
-            'paiements_recus' => (float) Paiement::sum('montant'),
-            'projetStats' => $projetStats,
-            'factureStats' => $factureStats,
-            'paiementStats' => $paiementStats,
-        ]);
+        return view('dashboard.index', [
+    'employes' => Employe::count(),
+    'clients' => Client::count(),
+    'projets' => Projet::count(),
+    'chantiers' => Chantier::count(),
+    'equipes' => Equipe::count(),
+    'fournisseurs' => Fournisseur::count(),
+    'vehicules' => Vehicule::count(),
+    'taches' => Tache::count(),
+    'presences' => Presence::count(),
+    'salaires' => Salaire::count(),
+    'devis' => Devis::count(),
+    'factures' => Facture::count(),
+    'paiements' => Paiement::count(),
+    'materiels' => Materiel::count(),
+
+    'stock_total' => (int) Stock::sum('quantite'),
+
+    'stock_value' => (float) Stock::join(
+        'materiels',
+        'stocks.materiel_id',
+        '=',
+        'materiels.id'
+    )->sum(DB::raw('stocks.quantite * materiels.prix_unitaire')),
+
+    'factures_impayees' => Facture::where('statut', '!=', 'Payée')->count(),
+
+    'paiements_recus' => (float) Paiement::sum('montant'),
+
+    'projetStats' => $projetStats,
+    'factureStats' => $factureStats,
+    'paiementStats' => $paiementStats,
+
+    // 👇 Ajouter ceci
+    'recentProjects' => Projet::latest()->take(5)->get(),
+]);
     }
 }
